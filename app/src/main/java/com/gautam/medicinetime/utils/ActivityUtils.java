@@ -11,9 +11,6 @@ import androidx.core.content.ContextCompat;
 import android.view.View;
 
 
-/**
- * Created by gautam on 13/07/17.
- */
 
 public class ActivityUtils {
 

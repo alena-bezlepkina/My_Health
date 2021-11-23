@@ -8,9 +8,7 @@ import com.gautam.medicinetime.data.source.Pills;
 
 import java.util.List;
 
-/**
- * Created by gautam on 12/07/17.
- */
+
 
 public class AddMedicinePresenter implements AddMedicineContract.Presenter, MedicineDataSource.GetTaskCallback {
 

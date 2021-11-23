@@ -2,9 +2,7 @@ package com.gautam.medicinetime.data.source;
 
 import java.util.List;
 
-/**
- * Created by gautam on 13/07/17.
- */
+
 
 public interface MedicineDataSource {
 

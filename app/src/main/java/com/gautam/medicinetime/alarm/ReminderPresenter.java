@@ -7,9 +7,7 @@ import com.gautam.medicinetime.data.source.MedicineAlarm;
 import com.gautam.medicinetime.data.source.MedicineDataSource;
 import com.gautam.medicinetime.data.source.MedicineRepository;
 
-/**
- * Created by gautam on 13/07/17.
- */
+
 
 public class ReminderPresenter implements ReminderContract.Presenter {
 

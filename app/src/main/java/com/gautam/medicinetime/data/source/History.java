@@ -2,9 +2,6 @@ package com.gautam.medicinetime.data.source;
 
 import java.util.Locale;
 
-/**
- * Created by gautam on 13/07/17.
- */
 
 public class History {
 

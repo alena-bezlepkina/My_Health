@@ -7,9 +7,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Locale;
 
-/**
- * Created by gautam on 12/07/17.
- */
+
 
 public class MedicineAlarm implements Comparable<MedicineAlarm> {
 

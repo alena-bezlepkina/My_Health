@@ -6,9 +6,6 @@ import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
-/**
- * Created by gautam on 13/07/17.
- */
 
 public class Pills {
 

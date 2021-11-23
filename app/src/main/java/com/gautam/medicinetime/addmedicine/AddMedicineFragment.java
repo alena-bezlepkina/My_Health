@@ -49,9 +49,6 @@ import butterknife.Unbinder;
 
 import static android.content.Context.ALARM_SERVICE;
 
-/**
- * Created by gautam on 12/07/17.
- */
 
 public class AddMedicineFragment extends Fragment implements AddMedicineContract.View {
 
