@@ -16,10 +16,6 @@ import java.util.Collections;
 import java.util.List;
 
 
-/**
- * Created by gautam on 13/07/17.
- */
-
 public class MedicineDBHelper extends SQLiteOpenHelper {
 
     /**
@@ -35,6 +31,7 @@ public class MedicineDBHelper extends SQLiteOpenHelper {
     /**
      * Table names
      */
+    private static final String USER_TABLE = "user_data";
     private static final String PILL_TABLE = "pills";
     private static final String ALARM_TABLE = "alarms";
     private static final String PILL_ALARM_LINKS = "pill_alarm";
@@ -62,6 +59,12 @@ public class MedicineDBHelper extends SQLiteOpenHelper {
     private static final String KEY_DOSE_UNITS = "dose_units";
     private static final String KEY_ALARM_ID = "alarm_id";
 
+    /**
+     * USER table columns, PASS/EMAIL used by Log in
+     */
+    public static final String KEY_USER_ID = "user_id";
+    public static final String KEY_PASSWORD = "password";
+    public static final String KEY_MAIL = "mail";
 
     /**
      * Pill-Alarm link table columns
@@ -78,10 +81,20 @@ public class MedicineDBHelper extends SQLiteOpenHelper {
     /**
      * Pill Table: create statement
      */
+
     private static final String CREATE_PILL_TABLE =
             "create table " + PILL_TABLE + "("
                     + KEY_ROWID + " integer primary key not null,"
                     + KEY_PILLNAME + " text not null" + ")";
+
+    /**
+     * USER Table: create statement
+     */
+    private static final String CREATE_USER_TABLE =
+            "create table " + USER_TABLE + "("
+            + KEY_USER_ID + " integer primary key,"
+            + KEY_PASSWORD + " text,"
+            + KEY_MAIL + " text" + ")";
 
     /**
      * Alarm Table: create statement
@@ -123,6 +136,7 @@ public class MedicineDBHelper extends SQLiteOpenHelper {
     @Override
     /** Creating tables */
     public void onCreate(SQLiteDatabase db) {
+        db.execSQL(CREATE_USER_TABLE);
         db.execSQL(CREATE_PILL_TABLE);
         db.execSQL(CREATE_ALARM_TABLE);
         db.execSQL(CREATE_PILL_ALARM_LINKS_TABLE);
@@ -136,6 +150,7 @@ public class MedicineDBHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + ALARM_TABLE);
         db.execSQL("DROP TABLE IF EXISTS " + PILL_ALARM_LINKS);
         db.execSQL("DROP TABLE IF EXISTS " + HISTORIES_TABLE);
+        db.execSQL("drop table if exists " + USER_TABLE);
         onCreate(db);
     }
 

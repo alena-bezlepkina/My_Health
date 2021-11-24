@@ -10,8 +10,6 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.core.content.ContextCompat;
 import android.view.View;
 
-
-
 public class ActivityUtils {
 
     /**
